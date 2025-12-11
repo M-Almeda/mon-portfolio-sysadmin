@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1 : Déploiement d'un Homelab Virtualisé | [Votre Nom]</title>
+    <link rel="stylesheet" href="../style.css"> 
+    </head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="../index.html">[Votre Nom]</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="#">Projets Techniques</a></li>
+                    <li><a href="../competences.html">Compétences</a></li>
+                    <li><a href="../a-propos.html">À Propos</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="project-detail" class="section-padding">
+            <div class="container">
+                <h1>Déploiement et Administration d'un Homelab Virtualisé avec Proxmox</h1>
+
+                <article class="project-summary">
+                    <h2>🚀 Contexte et Objectifs</h2>
+                    <p>Ce projet visait à simuler un environnement d'entreprise complet pour tester des solutions d'infrastructure, de sécurité et d'automatisation. L'objectif était de maîtriser la gestion d'un hyperviseur bare-metal, la segmentation réseau (VLAN) et la gestion centralisée du stockage.</p>
+                    
+                    <ul class="key-facts">
+                        <li><strong>Rôles :</strong> Architecte, Administrateur Systèmes</li>
+                        <li><strong>Technologies Clés :</strong> Proxmox VE, KVM/LXC, Debian, VLANs, NFS, Ansible.</li>
+                        <li><strong>Durée :</strong> 4 semaines (incluant la documentation)</li>
+                        <li><strong>Statut :</strong> Terminé et opérationnel</li>
+                    </ul>
+                </article>
+
+                <article class="technical-implementation">
+                    <h2>⚙️ Mise en Œuvre Technique</h2>
+                    
+                    <h3>1. Architecture de Virtualisation</h3>
+                    <p>Le choix de <a href="https://www.proxmox.com/en/" target="_blank">Proxmox VE</a> a été fait pour sa flexibilité et son utilisation de technologies open-source (KVM pour les VMs, LXC pour les conteneurs). L'hôte physique a été configuré avec un RAID logiciel pour la redondance des données.</p>
+                    <p>J'ai déployé 5 VMs principales, incluant un contrôleur de domaine (Windows Server), un serveur web LAMP et un serveur d'automatisation (Ansible/Python).</p>
+                    
+
+                    <h3>2. Segmentation Réseau (VLAN)</h3>
+                    <p>Pour des raisons de sécurité et de performance, j'ai segmenté le réseau virtuel en trois VLANs distincts : Administration (10), Serveurs (20) et Utilisateurs (30). Les règles de routage et de filtrage ont été définies sur un routeur virtuel (pfSense) pour isoler le trafic.</p>
+
+                    <h4>Extrait de la configuration réseau sur l'hôte Proxmox :</h4>
+                    <pre><code class="language-shell">
+# /etc/network/interfaces
+auto vmbr10
+iface vmbr10 inet static
+    address 192.168.10.1/24
+    bridge-ports none
+    bridge-vlan-aware yes
+    bridge-vids 10 20 30 # Autorisation des VLANs
+    # ... autres configurations ...
+                    </code></pre>
+                    
+                    <h3>3. Gestion du Déploiement via Ansible</h3>
+                    <p>Pour standardiser et accélérer le déploiement des services de base (installation de packages, configuration SSH, création d'utilisateurs) sur les VMs Debian, j'ai développé un playbook Ansible. Cela a permis une gestion <a href="https://en.wikipedia.org/wiki/Infrastructure_as_Code" target="_blank">Infrastructure as Code (IaC)</a> pour cette partie du projet.</p>
+
+                </article>
+
+                <article class="conclusion">
+                    <h2>✅ Résultats et Conclusion</h2>
+                    <ul>
+                        <li><strong>Maîtrise :</strong> Validation de la capacité à installer, configurer et administrer un hyperviseur de production.</li>
+                        <li><strong>Efficacité :</strong> Réduction du temps de configuration initiale des VMs de 30 minutes à 5 minutes grâce au playbook Ansible.</li>
+                        <li><strong>Compétences démontrées :</strong> Virtualisation, Réseaux (VLAN), Stockage (NFS), Scripting/Automatisation.</li>
+                    </ul>
+
+                    <p>Lien vers la documentation complète : <a href="[Lien vers PDF ou Wiki]" target="_blank">Documentation technique détaillée du projet</a></p>
+                    <p>Lien vers le code (Ansible Playbook, Scripts) : <a href="[Lien vers le dépôt GitHub]" target="_blank">Dépôt GitHub du Projet</a></p>
+
+                </article>
+
+                <div class="navigation-footer">
+                    <a href="../projets.html" class="cta-button">Retour aux Projets</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year-project"></span> [Votre Nom].</p>
+            <script>document.getElementById('current-year-project').textContent = new Date().getFullYear();</script>
+        </div>
+    </footer>
+
+</body>
+</html>

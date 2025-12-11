@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences Techniques | [Votre Nom]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="index.html">[Votre Nom]</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets Techniques</a></li>
+                    <li><a href="#">Compétences</a></li> <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="skills" class="section-padding">
+            <div class="container">
+                <h1>Mon Catalogue de Compétences Techniques</h1>
+                <p>Mes connaissances et expériences sont regroupées ci-dessous, reflétant mon expertise en infrastructure moderne et en automatisation.</p>
+
+                <article class="skill-category">
+                    <h2>🖥️ Systèmes & Virtualisation</h2>
+                    <div class="skill-list">
+                        <span class="skill-tag">Linux (Debian, CentOS, Ubuntu)</span>
+                        <span class="skill-tag">Windows Server (AD, GPO)</span>
+                        <span class="skill-tag">Proxmox VE</span>
+                        <span class="skill-tag">VMware vSphere / ESXi</span>
+                        <span class="skill-tag">Docker / Kubernetes (Notions)</span>
+                        <span class="skill-tag">Shell Scripting (Bash)</span>
+                    </div>
+                </article>
+
+                <article class="skill-category">
+                    <h2>🌐 Réseaux et Sécurité</h2>
+                    <div class="skill-list">
+                        <span class="skill-tag">TCP/IP, DNS, DHCP</span>
+                        <span class="skill-tag">Routage (Statique, OSPF/BGP)</span>
+                        <span class="skill-tag">VLANs / STP</span>
+                        <span class="skill-tag">Cisco IOS (Configuration de Base)</span>
+                        <span class="skill-tag">Firewalling (Iptables, pfSense)</span>
+                        <span class="skill-tag">VPN (OpenVPN, IPsec)</span>
+                    </div>
+                </article>
+
+                <article class="skill-category">
+                    <h2>🤖 Automatisation et DevOps</h2>
+                    <div class="skill-list">
+                        <span class="skill-tag">Ansible</span>
+                        <span class="skill-tag">Python (Scripts d'Administration)</span>
+                        <span class="skill-tag">PowerShell</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Concepts IaC (Infrastructure as Code)</span>
+                    </div>
+                </article>
+                
+                <p class="call-to-action">Pour voir comment j'utilise ces compétences concrètement, visitez ma page <a href="projets.html">Projets Techniques</a>.</p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year-skills"></span> [Votre Nom]. Tous droits réservés.</p>
+            <script>document.getElementById('current-year-skills').textContent = new Date().getFullYear();</script>
+        </div>
+    </footer>
+
+</body>
+</html>

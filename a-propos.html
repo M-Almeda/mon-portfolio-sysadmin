@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Moi | [Votre Nom]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="index.html">[Votre Nom]</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets Techniques</a></li>
+                    <li><a href="competences.html">Compétences</a></li>
+                    <li><a href="#">À Propos</a></li> <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="section-padding">
+            <div class="container about-flex">
+                <div class="about-content">
+                    <h1>Devenir Administrateur SysAdmin : Mon Parcours</h1>
+                    
+                    <h2>Mon Histoire</h2>
+                    <p>Actuellement étudiant en Master 2 Réseaux et Systèmes Informatiques à [Nom de l'Université/École], je suis passionné par l'architecture des infrastructures, la gestion des systèmes critiques et la cybersécurité. Mon objectif est d'intégrer une équipe dynamique où je pourrai appliquer mes connaissances pour garantir la performance et la résilience des systèmes.</p>
+
+                    <h2>Formation et Expérience</h2>
+                    <ul class="timeline">
+                        <li>
+                            <span class="date">2024 - 2025</span>
+                            <p><strong>Master 2 Réseaux et Systèmes Informatiques</strong> à [Nom de l'Université/École]. (Spécialisation : Cloud et Automatisation)</p>
+                        </li>
+                        <li>
+                            <span class="date">2023</span>
+                            <p><strong>Stage d'Administrateur Junior</strong> chez [Nom de l'Entreprise]. (Mise en place d'un serveur de supervision Zabbix et gestion des incidents L2.)</p>
+                        </li>
+                        <li>
+                            <span class="date">2022</span>
+                            <p><strong>Licence Informatique</strong> à [Nom de l'Université/École].</p>
+                        </li>
+                    </ul>
+                    
+                    <h2>Veille et Homelab</h2>
+                    <p>Je maintiens activement un <a href="[Lien vers votre Blog/Wiki Homelab]">Homelab personnel</a> pour tester les technologies émergentes (SDN, conteneurisation avancée). Je suis actuellement en préparation pour la certification **CompTIA Network+**.</p>
+                    
+                    <a href="contact.html" class="cta-button">Prenez Contact</a>
+                </div>
+                
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Photo de profil professionnelle" style="max-width: 100%; border-radius: 8px;">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year-about"></span> [Votre Nom]. Tous droits réservés.</p>
+            <script>document.getElementById('current-year-about').textContent = new Date().getFullYear();</script>
+        </div>
+    </footer>
+
+</body>
+</html>

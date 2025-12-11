@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets Techniques | [Votre Nom]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="index.html">[Votre Nom]</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Projets Techniques</a></li> <li><a href="competences.html">Compétences</a></li>
+                    <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="project-listing" class="section-padding">
+            <div class="container">
+                <h1>Toutes mes Études de Cas d'Infrastructure</h1>
+                <p>Chaque projet ci-dessous représente une solution technique concrète que j'ai conçue, implémentée et documentée. Cliquez pour accéder aux détails techniques, aux configurations et aux scripts.</p>
+
+                <div class="project-grid full-list">
+                    
+                    <article class="project-card">
+                        <h4>Déploiement d'un Homelab Virtualisé</h4>
+                        <p><strong>Objectif :</strong> Simuler une infrastructure d'entreprise complète pour les tests. Maîtrise de Proxmox, KVM, et gestion du stockage NFS.</p>
+                        <div class="tags">
+                            <span class="tech-tag">Proxmox</span>
+                            <span class="tech-tag">KVM</span>
+                            <span class="tech-tag">NFS</span>
+                            <span class="tech-tag">Ansible</span>
+                        </div>
+                        <a href="projets/projet-1.html" class="read-more">Lire l'étude de cas →</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h4>Automatisation du Déploiement Web (LAMP Stack)</h4>
+                        <p><strong>Objectif :</strong> Créer un workflow rapide et reproductible pour déployer des environnements LAMP complets sur CentOS en utilisant un outil d'orchestration.</p>
+                        <div class="tags">
+                            <span class="tech-tag">Ansible</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">CentOS</span>
+                            <span class="tech-tag">IaC</span>
+                        </div>
+                        <a href="projets/projet-2.html" class="read-more">Lire l'étude de cas →</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h4>Mise en place d'une Passerelle Sécurisée et VLANs</h4>
+                        <p><strong>Objectif :</strong> Isoler les flux de données (Invités, Administration, Production) en configurant les VLANs et en durcissant le pare-feu (`iptables`) sur la passerelle.</p>
+                        <div class="tags">
+                            <span class="tech-tag">Iptables</span>
+                            <span class="tech-tag">VLAN</span>
+                            <span class="tech-tag">pfSense</span>
+                            <span class="tech-tag">Linux</span>
+                        </div>
+                        <a href="projets/projet-3.html" class="read-more">Lire l'étude de cas →</a>
+                    </article>
+                    
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year-projects"></span> [Votre Nom]. Tous droits réservés.</p>
+            <script>document.getElementById('current-year-projects').textContent = new Date().getFullYear();</script>
+        </div>
+    </footer>
+
+</body>
+</html>

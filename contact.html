@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-moi | [Votre Nom]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="index.html">[Votre Nom]</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets Techniques</a></li>
+                    <li><a href="competences.html">Compétences</a></li>
+                    <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <h1>Discutons de votre prochaine infrastructure.</h1>
+                <p>Que ce soit pour une opportunité d'emploi, un stage, ou un échange technique, je suis joignable via les moyens ci-dessous. Je réponds généralement sous 24h.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Informations Directes</h2>
+                        <p><strong>Email Professionnel :</strong> <a href="mailto:votre.email.pro@exemple.com">votre.email.pro@exemple.com</a></p>
+                        <p><strong>Téléphone :</strong> Sur demande (via Email/LinkedIn)</p>
+
+                        <h2>Réseaux Sociaux Professionnels</h2>
+                        <div class="social-links-contact">
+                            <a href="[Lien LinkedIn]" target="_blank" class="social-link">LinkedIn</a>
+                            <a href="[Lien GitHub]" target="_blank" class="social-link">GitHub</a>
+                            <a href="[Lien StackOverflow ou Forum Tech]" target="_blank" class="social-link">StackOverflow</a>
+                        </div>
+                        
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <h2>Envoyez un message (Formulaire)</h2>
+                        <form action="traitement_formulaire.php" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nom / Entreprise</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">Envoyer le Message</button>
+                            <p class="form-note">Alternativement, contactez-moi directement sur <a href="[Lien LinkedIn]">LinkedIn</a>.</p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year-contact"></span> [Votre Nom]. Tous droits réservés.</p>
+            <script>document.getElementById('current-year-contact').textContent = new Date().getFullYear();</script>
+        </div>
+    </footer>
+
+</body>
+</html>

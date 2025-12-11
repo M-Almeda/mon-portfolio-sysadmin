@@ -1,0 +1,410 @@
+/* ============================================== */
+/* 0. VARIABLES & RESET BASIQUE                     */
+/* ============================================== */
+:root {
+    /* Couleurs (Thème Sombre) */
+    --color-primary: #0077b6;   /* Bleu vif pour les accents */
+    --color-secondary: #00b4d8;  /* Bleu clair (CTA Hover) */
+    --color-background: #1e1e1e; /* Fond principal sombre */
+    --color-text: #f0f0f0;       /* Texte clair */
+    --color-card-bg: #2d2d30;    /* Fond des cartes (Projets) */
+    --color-border: #444444;     /* Bordures subtiles */
+
+    /* Typographie */
+    --font-stack: 'Roboto Mono', monospace, sans-serif; /* Police technique et lisible */
+}
+
+/* Reset pour une bonne base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Conteneur pour centrer et limiter la largeur du contenu */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ============================================== */
+/* 1. TYPOGRAPHIE & LIENS                           */
+/* ============================================== */
+h1, h2, h3, h4 {
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+h2 { font-size: 2em; }
+h3 { font-size: 1.5em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* Bouton d'Action (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-background); /* Texte sombre sur fond bleu */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-background);
+    text-decoration: none;
+}
+
+
+/* ============================================== */
+/* 2. HEADER & NAVIGATION                           */
+/* ============================================== */
+header {
+    background-color: var(--color-card-bg); /* Un gris foncé subtil */
+    padding: 15px 0;
+    border-bottom: 3px solid var(--color-primary); /* Ligne d'accent */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--color-text);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    color: var(--color-text);
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* ============================================== */
+/* 3. SECTIONS PRINCIPALES                          */
+/* ============================================== */
+.section-padding {
+    padding: 60px 0;
+}
+
+/* Section Héro (Jumbotron) */
+#hero {
+    background-color: #2d2d30; 
+    text-align: center;
+    padding: 100px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0.5em auto 20px auto;
+}
+
+/* Grille de Projets (Featured Projects) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Rend la grille responsive */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: var(--color-card-bg);
+    padding: 25px;
+    border-left: 5px solid var(--color-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.project-card h4 {
+    font-size: 1.2em;
+    color: var(--color-secondary);
+}
+
+.project-card .read-more {
+    font-style: italic;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 10px;
+}
+
+/* ============================================== */
+/* 4. FOOTER                                        */
+/* ============================================== */
+footer {
+    background-color: #111111;
+    color: var(--color-border);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    border-top: 1px solid var(--color-border);
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: var(--color-border);
+}
+
+.social-links a:hover {
+    color: var(--color-secondary);
+}
+
+/* ============================================== */
+/* 5. RESPONSIVE (Pour les petits écrans)            */
+/* ============================================== */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .main-nav ul li {
+        margin: 5px 0;
+    }
+    #hero {
+        padding: 50px 0;
+    }
+}
+
+/* AJOUTER CECI AU BAS DE VOTRE FICHIER style.css */
+
+/* Style pour les blocs de code (comme un terminal) */
+pre {
+    background-color: #0d0d0d; /* Fond très sombre */
+    color: #00ff7f; /* Couleur de texte vert néon (classique pour la console) */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; /* Permet le défilement horizontal si la ligne est trop longue */
+    margin: 20px 0;
+    font-size: 0.9em;
+}
+
+code {
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+/* Style pour la liste de faits clés */
+.key-facts {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+    border-left: 3px solid var(--color-secondary);
+    padding-left: 15px;
+}
+
+.key-facts li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.key-facts li strong {
+    color: var(--color-primary);
+}
+
+/* AJOUTS POUR COMPETENCES.HTML (Skill Tags) */
+.skill-category {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-primary);
+}
+
+.skill-category h2 {
+    color: var(--color-secondary);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* AJOUTS POUR A-PROPOS.HTML (Timeline et Flex) */
+.about-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.about-content {
+    flex: 3;
+}
+
+.profile-image {
+    flex: 1;
+    min-width: 200px;
+}
+
+.timeline {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.timeline li {
+    border-left: 2px solid var(--color-border);
+    padding-left: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.timeline li .date {
+    display: block;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--color-primary);
+    border-radius: 50%;
+}
+
+/* AJOUTS POUR CONTACT.HTML (Formulaire) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-info {
+    padding: 20px;
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+}
+
+.contact-info a {
+    font-weight: bold;
+}
+
+.contact-form-wrapper {
+    padding: 20px;
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border-radius: 4px;
+    font-family: var(--font-stack);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+    .about-flex, .contact-grid {
+        flex-direction: column;
+        display: block;
+    }
+    .profile-image {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
+
+/* AJOUTS POUR LA LISTE DE PROJETS */
+
+/* Conteneur des tags techniques */
+.project-card .tags {
+    margin: 15px 0 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* Style individuel des tags techniques */
+.project-card .tech-tag {
+    background-color: var(--color-border); /* Un gris plus neutre */
+    color: var(--color-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 500;
+}

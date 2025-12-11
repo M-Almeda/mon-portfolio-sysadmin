@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Votre Nom] | Portfolio Administrateur Systèmes & Réseaux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">[Votre Nom]</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets Techniques</a></li>
+                    <li><a href="competences.html">Compétences</a></li>
+                    <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="jumbotron">
+            <div class="container">
+                <h2>Futur Administrateur Systèmes & Réseaux</h2>
+                <p>Étudiant en Master 2, spécialisé dans la conception, la sécurisation et l'automatisation d'infrastructures informatiques robustes.</p>
+                <a href="projets.html" class="cta-button">Découvrir mes Projets</a>
+            </div>
+        </section>
+
+        <section id="featured-projects" class="section-padding">
+            <div class="container">
+                <h3>Mes Réalisations Clés</h3>
+                <p>Une sélection de travaux récents mettant en lumière mes compétences en scripting, virtualisation et sécurité.</p>
+                
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h4>Déploiement d'un Homelab Virtualisé</h4>
+                        <p>Installation et configuration d'un environnement KVM/Proxmox, gestion des réseaux virtuels et du stockage (NFS/iSCSI).</p>
+                        <a href="projets/projet-1.html" class="read-more">Voir l'étude de cas</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h4>Automatisation des Sauvegardes avec Bash et Cron</h4>
+                        <p>Création d'un script Bash pour la sauvegarde incrémentielle de données critiques et planification via `cron`.</p>
+                        <a href="projets/projet-2.html" class="read-more">Voir l'étude de cas</a>
+                    </article>
+
+                    <article class="project-card">
+                        <h4>Audit de Sécurité et Configuration IPTables</h4>
+                        <p>Analyse des vulnérabilités d'un serveur et mise en place de règles de pare-feu strictes pour durcir le système.</p>
+                        <a href="projets/projet-3.html" class="read-more">Voir l'étude de cas</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> [Votre Nom]. Tous droits réservés.</p>
+            <div class="social-links">
+                <a href="[Lien LinkedIn]" target="_blank">LinkedIn</a> | 
+                <a href="[Lien GitHub]" target="_blank">GitHub</a> |
+                <a href="mailto:votre.email@exemple.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
